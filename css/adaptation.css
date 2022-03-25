@@ -2,7 +2,7 @@
     .navigation .mobile_menu {
         display:none;
     }
-    .mobile_lang {
+    nav .lang {
         display: none;
     }
 }
@@ -22,7 +22,7 @@
     }
 
     .closed_menu {
-        margin-top: -742px;
+        margin-top: -732px;
     }
 
     .navigation nav {
@@ -47,22 +47,22 @@
         font-size: 34px;
     }
 
-    .lang {
+    .top_content .lang {
         display: none;
-        visibility: hidden;
     }
 
-    .mobile_lang {
-        display: flex;
-        justify-content: center;
-        font-family: Gilroy-Bold;
+    .lang {
         font-size: 34px;
         writing-mode: vertical-rl;
         transform:rotate(360deg);
-        margin-right: 30px;
+        margin-left: 87%;
         margin-top: 30px;
     }
 
+    .top {
+        padding: 0 10px;
+    }
+    
     .top_content {
         display: flex;
         flex-direction: column;
@@ -84,14 +84,7 @@
     }
 
     .skills__programs {
-        display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .program {
-        padding: 80px 0 0 0;
     }
 
     .contact_content__message {

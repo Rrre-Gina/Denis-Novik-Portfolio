@@ -1,4 +1,4 @@
-//menu 
+//menu scrolling
 
 const array_section = document.getElementsByTagName('section');
 const nav_btn = document.getElementsByTagName('li');
@@ -35,37 +35,30 @@ function mobileMenu()
 
 
 
-//language(desctop) 
+//language color
 
-const lang_ru = document.querySelectorAll('.lang_style > a')[2];
-const lang_en = document.querySelectorAll('.lang_style > a')[3];
-lang_ru.onclick = function (e) {
-    e.preventDefault();
-    lang_ru.style.color = "black";
-    lang_en.style.color = "#828282";
+const lang_ru = document.querySelectorAll('#ru');
+const lang_en = document.querySelectorAll('#en');
+
+for  (let ru of lang_ru) {
+    for (let en of lang_en) {
+
+        ru.addEventListener('click', chooseRU);
+        en.addEventListener('click', chooseEN);
+
+        function chooseRU (e) {
+            e.preventDefault();
+            ru.style.color = "black";
+            en.style.color = "#828282";
+        }
+        function chooseEN (e) {
+            e.preventDefault();
+            ru.style.color = "#828282";
+            en.style.color = "black";
+        }
+
+    }
 }
-lang_en.onclick = function (e)
-{
-    e.preventDefault();
-    lang_ru.style.color = "#828282";
-    lang_en.style.color = "black";
-}
 
 
-
-//language (mobile)
-
-const mob_lang_ru = document.querySelectorAll('.lang_style > a')[0];
-const mob_lang_en = document.querySelectorAll('.lang_style > a')[1];
-mob_lang_ru.onclick = function (e) {
-    e.preventDefault();
-    mob_lang_ru.style.color = "black";
-    mob_lang_en.style.color = "#828282";
-}
-mob_lang_en.onclick = function (e)
-{
-    e.preventDefault();
-    mob_lang_ru.style.color = "#828282";
-    mob_lang_en.style.color = "black";
-}
 
