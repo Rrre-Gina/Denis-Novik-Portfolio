@@ -43,22 +43,17 @@ const lang_en = document.querySelectorAll('#en');
 for  (let ru of lang_ru) {
     for (let en of lang_en) {
 
-        ru.addEventListener('click', chooseRU);
-        en.addEventListener('click', chooseEN);
-
-        function chooseRU (e) {
+        ru.addEventListener("click", (e) => {
             e.preventDefault();
-            ru.style.color = "black";
-            en.style.color = "#828282";
-        }
-        function chooseEN (e) {
+                ru.style.color = "black";
+                en.style.color = "#828282";
+        });
+        
+        en.addEventListener('click', (e) => {
             e.preventDefault();
             ru.style.color = "#828282";
             en.style.color = "black";
-        }
+        })
 
     }
 }
-
-
-
