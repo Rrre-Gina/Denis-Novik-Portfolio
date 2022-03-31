@@ -37,23 +37,23 @@ function mobileMenu()
 
 //language color
 
-const lang_ru = document.querySelectorAll('#ru');
-const lang_en = document.querySelectorAll('#en');
+const arr = document.querySelectorAll('.lang > a');
+arr.forEach(function (item) {
 
-for  (let ru of lang_ru) {
-    for (let en of lang_en) {
+    item.addEventListener('click', linkProcess);
+    function linkProcess (e) {
+        e.preventDefault();
+        langColor(item);
+    }
+    
+})
 
-        ru.addEventListener("click", (e) => {
-            e.preventDefault();
-                ru.style.color = "black";
-                en.style.color = "#828282";
-        });
-        
-        en.addEventListener('click', (e) => {
-            e.preventDefault();
-            ru.style.color = "#828282";
-            en.style.color = "black";
-        })
-
+function langColor(item) {
+    if ( item.id == "ru" ) {
+        item.style.color = 'black'; 
+        item.nextElementSibling.style.color = '#828282';
+    } else {
+        item.style.color = 'black';
+        item.previousElementSibling.style.color = '#828282';
     }
 }
